@@ -1,0 +1,36 @@
+{
+  "name": "buysell",
+  "version": "1.0.0",
+  "description": "Platform to buy and sell",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/myeon7/Solo-Project.git"
+  },
+  "keywords": [
+    "buy",
+    "sell",
+    "purchase",
+    "community"
+  ],
+  "author": "Matthew Yeon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/myeon7/Solo-Project/issues"
+  },
+  "homepage": "https://github.com/myeon7/Solo-Project#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "pg-promise": "^10.11.1",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
