@@ -5,7 +5,6 @@ const path = require('path');
 const PORT = 3000;
 const bsdbRouter = require('./routes/bsdb');
 
-
 // Access to Frontend 
 app.use(express.static(path.resolve('client')));
 
@@ -16,8 +15,13 @@ app.use('/bsdb', bsdbRouter);
 app.use((req, res) => res.status(404).send('This is not the page you are looking for...'));
 // Error Handler (global)
 app.use((err, req, res, next) => {
-  console.log('GLOBAL ERROR!!!')
-  res.status(err.status).send(err.message);
+  const defaultErr = {
+    log: 'Express error handler detected unknown middleware error',
+    status: 400,
+    message: {err: 'An error occured'},
+  };
+  const errorObj = Object.assign({}, defaultErr, err)
+  res.status(errorObj.status).send(errorObj.message);
 });
 
 app.listen(PORT, () => {`Listening on port: {PORT}`});

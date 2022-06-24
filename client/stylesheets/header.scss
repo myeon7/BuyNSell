@@ -1,0 +1,25 @@
+#header {
+  height:50px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gold;
+  border-radius: 5px;
+}
+.logo { color:black; margin-left: 13px;}
+
+h2 {
+  margin-left: 10px;
+  display:inline-block;
+}
+
+.profileImg{
+  font-weight: bold;
+  width: 34px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  margin-right: 15px;
+  border-radius: 10px;
+  background-color: orange;
+}
